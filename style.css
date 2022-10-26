@@ -1,0 +1,174 @@
+* {
+  margin: 0;
+  padding: 0;
+  top: 0;
+}
+body{
+   min-width:600px;        /* Suppose you want minimum width of 1000px */
+   width: auto !important;  /* Firefox will set width as auto */
+   width:600px;            /* As IE6 ignores !important it will set width as 1000px; */
+   min-height:600px;
+}
+.file {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  font-size: 12px;
+  padding: 15px 30px;
+  letter-spacing: 0.1em;
+  font-weight: bold;
+  color: #7289DA;
+  display: block;
+  cursor: pointer;
+  transition: transform 0.3s;
+  z-index: 10;
+}
+.file:before {
+  content: "";
+  position: absolute;
+  display: block;
+  top: 6px;
+  left: 6px;
+  width: 100%;
+  height: 100%;
+  border: 2px solid #ffffff;
+  z-index: -2;
+  transition: transform 0.3s;
+}
+.file:after {
+  content: "";
+  position: absolute;
+  display: block;
+  border: 2px solid #5865f2;
+  top: -2px;
+  left: -2px;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+.file:hover {
+  transform: translate(8px, 8px);
+}
+.file:hover:before {
+  transform: translate(-8px, -8px);
+}
+.file input {
+  display: none;
+}
+
+canvas {
+  position: absolute;
+  background: #000000;
+  width: 100%;
+  height: 100%;
+  z-index: -3;
+}
+
+label {
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+ }
+
+ body {
+  grid-template-columns: repeat(1, 1fr);
+  place-items: center;
+  margin: 0;
+  height: 100vh;
+  background: linear-gradient(90deg, #000 100%, #fff 0);
+}
+
+.discord{
+   width: 50px;
+   height: 40px;
+   border-radius: 50%;
+   background: radial-gradient(circle 6px at calc(50% + 2px) calc(50% + 4px), #000 90%, #fff) left, radial-gradient(circle 6px at calc(50% - 2px) calc(50% + 4px), #000 90%, #fff) right;
+   background-size: 51% 100%;
+   background-repeat: no-repeat;
+   position: fixed;
+   filter: drop-shadow(0.5px 0px 0px #000) drop-shadow(0px -0.5px 0px #000) drop-shadow(0px 0.5px 0px #000) drop-shadow(1px 1px 0px #000) drop-shadow(-0.5px 0px 0px #000);
+   animation: dis-0 1s infinite;
+   left: 49%;
+   top: 49%;
+   
+}
+.discord::before, .discord::after {
+   content: "";
+   position: absolute;
+   animation: inherit;
+}
+ .discord::before {
+   top: -5px;
+   right: -7px;
+
+   bottom: -10px;
+   animation-name: dis-1;
+   border: solid #fff;
+   border-width: 2px 12px 6px;
+   border-radius: 50% / 35%;
+   clip-path: polygon(8% 0, 35% 0, 40% 15px, 60% 15px, 65% 0, 92% 0, 100% 100%, 70% 100%, 60% calc(100% - 20px), 40% calc(100% - 20px), 30% 100%, 0 100%);
+}
+ .discord::after {
+   top: -6px;
+   right: -9px;
+   bottom: -8px;
+   animation-name: dis-2;
+   background: #fff;
+   border-radius: 85% 85% 77% 77%;
+   clip-path: polygon(10% 0, 90% 0, 105% 100%, -5% 100%);
+}
+ @keyframes dis-0 {
+   20% {
+     transform: rotate(-20deg);
+  }
+   75% {
+     transform: rotate(380deg);
+  }
+   80%, 100% {
+     transform: rotate(360deg);
+  }
+}
+@keyframes dis-1 {
+  0% {
+    transform: rotate(0deg);
+   top: -5px;
+   right: -7px;
+   left: -10px;
+ }
+   20% {
+     transform: rotate(0deg);
+    top: -5px;
+    right: -7px;
+    left: -10px;
+  }
+   60% {
+     transform: rotate(-60deg);
+   top: -10px;
+   right: -12px;
+   left: -15px;;
+  }
+   80%, 100% {
+     transform: rotate(0deg);
+     top: -5px;
+   right: -7px;
+   left: -10px;
+  }
+}
+@keyframes dis-2 {
+   20% {
+     transform: rotate(0deg);
+   top: -6px;
+   right: -9px;
+   bottom: -8px;
+  }
+   60% {
+     transform: rotate(-60deg);
+     top: -17px;
+   right: -21px;
+   bottom: -19px;
+  }
+   80%, 100% {
+     transform: rotate(0deg);
+      top: -6px;
+   right: -9px;
+    bottom: -8px;
+  }
+}

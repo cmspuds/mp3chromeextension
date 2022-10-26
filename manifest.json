@@ -1,0 +1,12 @@
+{
+    "name": "Ktizo MP3 Visualiser",
+    "version": "1.0.0",
+    "description": "Make MP3's Come to Life",
+    "manifest_version": 3,
+    "author": "Ktizo.Tech",
+    "action":{
+        "default_popup": "index.html",
+        "default_title": "Ktizo MP3"
+    
+    }
+}
