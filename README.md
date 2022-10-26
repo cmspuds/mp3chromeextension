@@ -1,0 +1,1 @@
+Guide to install: https://learn.microsoft.com/en-us/microsoft-edge/extensions-chromium/getting-started/extension-sideloading
